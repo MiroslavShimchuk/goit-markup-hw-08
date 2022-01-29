@@ -4,14 +4,29 @@
 
 .customers-list {
     display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 0;
+    }
 }
 
 .customers-list__item {
-    width: 170px;
+    // width: 170px;
     height: 92px;
     box-sizing: border-box;
-    &+& {
-        margin-left: 30px;
+    width: calc(100%/2 - 30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
+    // &+& {
+    //     margin-left: 30px;
+    // }
+    @media screen and (min-width: 768px) {
+        width: calc(100%/3 - 30px);
+    }
+    @media screen and (min-width: 1200px) {
+        width: 170px;
     }
 }
 
@@ -36,11 +51,15 @@
 
 .customers-title {
     margin-top: 0;
-    margin-bottom: 50px;
-    font-size: 36px;
+    margin-bottom: 30px;
+    font-size: 28px;
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
 
     color: #212121;
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+        font-size: 36px;
+    }
 }
