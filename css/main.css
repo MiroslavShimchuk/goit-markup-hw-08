@@ -1013,8 +1013,8 @@ body {
 }
 
 .modal {
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  min-height: 609px;
   background-color: #fff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -1023,6 +1023,13 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 40px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal-close {
@@ -1152,7 +1159,7 @@ body {
 }
 
 .policy-text {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   display: flex;
@@ -1166,13 +1173,25 @@ body {
   border: none;
 }
 
+@media screen and (min-width: 1200px) {
+  .policy-text {
+    font-size: 14px;
+  }
+}
+
 .policy-conditions {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   margin-left: 5px;
   color: #2196F3;
+}
+
+@media screen and (min-width: 1200px) {
+  .policy-conditions {
+    font-size: 14px;
+  }
 }
 
 .submit-button {
