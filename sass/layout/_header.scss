@@ -45,7 +45,8 @@
 }
 
 .mob-menu {
-    position: absolute;
+    position: fixed;
+    z-index: 2;
     top: 0;
     left: 0;
     background-color: #ffffff;
@@ -74,8 +75,21 @@
     background-color: transparent;
     border: none;
     margin-left: auto; 
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
     @media screen and (min-width: 768px) {
         display: none;
+    }
+}
+
+.open-menu-icon {
+    fill: currentColor;
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
     }
 }
 
@@ -87,6 +101,20 @@
     background-color: transparent;
     border: none;
     margin-left: auto;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.menu-close-btn {
+    fill: currentColor;
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
 }
 
 .mob-menu-item:not(:last-child) {
@@ -135,6 +163,27 @@
 
 .mob-social-list {
     display: flex;
+}
+
+.mob-social-item:first-child {
+    padding-right: 10px;
+}
+
+.mob-social-item:nth-child(2) {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 1px solid rgba(33, 33, 33, 0.2);
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mob-social-item:nth-child(3) {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mob-social-item:last-child {
+    padding-left: 10px;
 }
 
 .mob-social-link {
